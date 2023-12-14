@@ -13,6 +13,14 @@ public class SceneController : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void LoadScene(string nameScene)
     {
         DOTween.KillAll();
