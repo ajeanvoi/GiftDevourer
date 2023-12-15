@@ -37,6 +37,7 @@ public abstract class Enemy : Entities
         base.OnTriggerEnter2D(collision);
         if (collision.gameObject.CompareTag("Player"))
         {
+            SoundController.Instance.MakeKillSound();
             GameManager.Instance.EndGame();
         }
     }

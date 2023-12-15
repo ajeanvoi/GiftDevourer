@@ -108,6 +108,7 @@ public class PlayerController : Entities
         //base.OnCollisionEnter2D(collision);
         if (collision.gameObject.CompareTag("Cadeau"))
         {
+            SoundController.Instance.MakeGetGiftSound();
             collision.gameObject.GetComponent<CadeauController>().Kill();
         }
     }
@@ -117,6 +118,7 @@ public class PlayerController : Entities
         // base.OnTriggerEnter2D(collision);
         if (collision.gameObject.CompareTag("Cadeau"))
         {
+            SoundController.Instance.MakeGetGiftSound();
             collision.gameObject.GetComponent<CadeauController>().Kill();
         }
     }

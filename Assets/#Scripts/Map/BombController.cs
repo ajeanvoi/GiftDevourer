@@ -15,6 +15,8 @@ public class BombController : MonoBehaviour
             yield return null;
         }
         //particle.Stop();
+
+        SoundController.Instance.MakeBombSound();
         GameObject obj = Instantiate(particleObj, transform.position, Quaternion.identity);
         ParticleSystem particleSystem = obj.GetComponent<ParticleSystem>();
 

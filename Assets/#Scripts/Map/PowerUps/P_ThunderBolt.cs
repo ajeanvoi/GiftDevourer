@@ -17,6 +17,8 @@ public class P_ThunderBolt : AbstractPowerUp
     {
         UniversalSpawner[] spawners = target.gameObject.GetComponentsInChildren<UniversalSpawner>();
 
+        SoundController.Instance.MakeThunderSound();
+
         // On mélange l'ordre des spawners
         spawners = MethodsDO.MelangeTab(spawners);
 

@@ -8,6 +8,8 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip getGiftSound;
     [SerializeField] private AudioClip killSound;
     [SerializeField] private AudioClip endSound;
+    [SerializeField] private AudioClip bombExplosion;
+    [SerializeField] private AudioClip thunder;
 
     private AudioSource soundEffectsSource;
     private AudioSource backgroundMusicSource;
@@ -124,6 +126,16 @@ public class SoundController : MonoBehaviour
     public void MakeEndSound()
     {
         MakeSound(endSound);
+    }
+
+    public void MakeThunderSound()
+    {
+        MakeSound(thunder);
+    }
+
+    public void MakeBombSound()
+    {
+        MakeSound(bombExplosion);
     }
 
     private void MakeSound(AudioClip originalClip)

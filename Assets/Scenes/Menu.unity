@@ -1064,12 +1064,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fcbd9856936524bae42ec0e9f93aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getGiftSound: {fileID: 0}
-  killSound: {fileID: 0}
-  endSound: {fileID: 0}
-  musicMenu: {fileID: 0}
-  musicCredit: {fileID: 0}
-  musicGame: {fileID: 0}
+  getGiftSound: {fileID: 8300000, guid: 6aa9b36187adbd540b45af514ecc0466, type: 3}
+  killSound: {fileID: 8300000, guid: 0f180c064be5b77499dad3c1cdf34a2f, type: 3}
+  endSound: {fileID: 8300000, guid: 0f180c064be5b77499dad3c1cdf34a2f, type: 3}
+  bombExplosion: {fileID: 8300000, guid: 98ed012d536ae79488e1b465d7291862, type: 3}
+  thunder: {fileID: 8300000, guid: fba42678d8f7e044faf2fecbf6642722, type: 3}
+  musicMenu: {fileID: 8300000, guid: 30c719e98b47e9f43906dcbe0236a3d1, type: 3}
+  musicCredit: {fileID: 8300000, guid: 30c719e98b47e9f43906dcbe0236a3d1, type: 3}
+  musicGame: {fileID: 8300000, guid: 30c719e98b47e9f43906dcbe0236a3d1, type: 3}
 --- !u!4 &1727887946
 Transform:
   m_ObjectHideFlags: 0
