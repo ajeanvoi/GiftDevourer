@@ -56,48 +56,65 @@ public static class MethodsDO
     /// <returns></returns>
     public static Vector3 ChooseSpawnPosition(Transform target, int nbParties)
     {
-        // On découpe la map en nbParties tranches verticales
+        //// On découpe la map en nbParties tranches verticales
+        //Vector3[] corners = UniversalSpawner.corners;
+
+        //float width = (corners[3].x - corners[0].x) / nbParties; // longueur d'une partie
+        //float height = corners[2].y - corners[0].y; // hauteur d'une partie
+
+        //Rect[] parties = new Rect[nbParties];
+        //int j = 0;
+        //float currentX = corners[0].x;
+        //float currentY = corners[0].y;
+        //while (j < nbParties)
+        //{
+        //    parties[j] = new Rect(currentX, currentY, width, height);
+        //    // Debug.Log(parties[j]);
+        //    currentX += width;
+        //    j++;
+        //}
+
+        //// On regarde où est le joueur et on fait spawn aléatoirement le policier dans une tranche à 2 de distances
+        //int nbRectPlayer = 0; // sur quelle partie est le joueur
+
+        //for (int i = 0; i < parties.Length; i++)
+        //{
+        //    if (parties[i].Contains(target.position))
+        //    {
+        //        nbRectPlayer = i;
+        //        break;
+        //    }
+        //}
+
+        //// int areaToSpawn = (nbRectPlayer + 2) % nbParties;
+        //int areaToSpawn = Random.Range(0, nbParties - 1);
+        //if (areaToSpawn == nbRectPlayer)
+        //{
+        //    areaToSpawn = nbParties - 1;
+        //}
+        //Rect rectToSpawn = parties[areaToSpawn];
+
+        //float randomX = Random.Range(rectToSpawn.x, rectToSpawn.x + width);
+        //float randomY = Random.Range(rectToSpawn.y, rectToSpawn.y + height);
+
+        //return new Vector3(randomX, randomY, 0);
+
+        Vector3 targetPos = target.transform.position;
+        Vector3 posEnemy = target.transform.position;
+
+        float distanceMin = 2f;
+
         Vector3[] corners = UniversalSpawner.corners;
 
-        float width = (corners[3].x - corners[0].x) / nbParties; // longueur d'une partie
-        float height = corners[2].y - corners[0].y; // hauteur d'une partie
+        while (Vector2.Distance(targetPos, posEnemy) < distanceMin){
+            float randomX = Random.Range(corners[0].x, corners[3].x);
+            float randomY = Random.Range(corners[0].y, corners[2].y);
 
-        Rect[] parties = new Rect[nbParties];
-        int j = 0;
-        float currentX = corners[0].x;
-        float currentY = corners[0].y;
-        while (j < nbParties)
-        {
-            parties[j] = new Rect(currentX, currentY, width, height);
-            // Debug.Log(parties[j]);
-            currentX += width;
-            j++;
+            posEnemy = new Vector2(randomX, randomY);
         }
+        // Debug.Log(posEnemy);
+        return posEnemy;
 
-        // On regarde où est le joueur et on fait spawn aléatoirement le policier dans une tranche à 2 de distances
-        int nbRectPlayer = 0; // sur quelle partie est le joueur
-
-        for (int i = 0; i < parties.Length; i++)
-        {
-            if (parties[i].Contains(target.position))
-            {
-                nbRectPlayer = i;
-                break;
-            }
-        }
-
-        // int areaToSpawn = (nbRectPlayer + 2) % nbParties;
-        int areaToSpawn = Random.Range(0, nbParties - 1);
-        if (areaToSpawn == nbRectPlayer)
-        {
-            areaToSpawn = nbParties - 1;
-        }
-        Rect rectToSpawn = parties[areaToSpawn];
-
-        float randomX = Random.Range(rectToSpawn.x, rectToSpawn.x + width);
-        float randomY = Random.Range(rectToSpawn.y, rectToSpawn.y + height);
-
-        return new Vector3(randomX, randomY, 0);
     }
 
     public static T[] MelangeTab<T>(T[] oldTab)
