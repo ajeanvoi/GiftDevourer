@@ -31,9 +31,10 @@ public class ButtonController : MonoBehaviour, ISelectHandler, IDeselectHandler,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        cadre.DOMoveX(this.transform.position.x, timeToMove);
-        infoText.text = description;
-        bouton.Select();
+        //cadre.DOMoveX(this.transform.position.x, timeToMove);
+        //infoText.text = description;
+        //bouton.Select();
+        return;
     }
 
     public void OnPointerExit(PointerEventData eventData)

@@ -1150,6 +1150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnerBounce
       objectReference: {fileID: 0}
+    - target: {fileID: 6431389655991749265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 760606bc495324b48bcab7f34804957e, type: 3}
     - target: {fileID: 7656204184997839265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1973,6 +1977,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6431389655991749265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 760606bc495324b48bcab7f34804957e, type: 3}
     - target: {fileID: 7656204184997839265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7808,6 +7816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnerBoostsBolt
       objectReference: {fileID: 0}
+    - target: {fileID: 6431389655991749265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 760606bc495324b48bcab7f34804957e, type: 3}
     - target: {fileID: 7656204184997839265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8659,6 +8671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnerBoostsSpeed
       objectReference: {fileID: 0}
+    - target: {fileID: 6431389655991749265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 760606bc495324b48bcab7f34804957e, type: 3}
     - target: {fileID: 7656204184997839265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9020,6 +9036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnerPolice
       objectReference: {fileID: 0}
+    - target: {fileID: 6431389655991749265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 760606bc495324b48bcab7f34804957e, type: 3}
     - target: {fileID: 7656204184997839265, guid: 846362699b612b146a08d6c0115411c1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
